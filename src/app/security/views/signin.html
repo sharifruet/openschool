@@ -1,0 +1,51 @@
+
+<style type="text/css">
+	.signin-control{
+		width: 318px; 
+		border: 1px solid rgba(0,0,0,.3) !important; 
+		background: linear-gradient(to bottom right, white, hsla(0,0%,100%,.8)) !important;
+	}
+</style>
+<section id="first" class="story" data-speed="8" data-type="background">
+    <div  class="row smashinglogo" style="height:630px">
+
+   <!--  <div class="col-md-3 runningVersion" >
+		<span>{{aboutMetrica}}</span>
+	</div> -->
+        <div>
+       
+        	<div class="form-box " id="login-box">
+        	  <div class="row">
+			    <div data-ng-include="messagePageLocation"></div>
+		      </div> 
+			    <div class="headerSgnIn" style="background-color:#0062A3;color:white";style="float:center">Welcome to My Application	 <img class="pull-right" src="images/login.jpg" style="margin-top:0px;margin-right:0px;height:85%"> </img>
+			    	 <br> <span style="padding-left:12px;" class="runningVersion">{{aboutMetrica}} </span> 
+			    </div>		    				   
+			    <form method="post" id="SigninForm" name="SigninForm" autocomplete="off">
+			   		
+			        <div class="body bg-clrSingin">			        	
+			            <div class="form-group has-feedback">
+			            	<label class="control-label">{{'user_id' | i18n}}</label>
+			                <input id="loginId" type="text" data-ng-model="user.loginId" name="userid" class="form-control signin-control" placeholder="{{'user_id' | i18n}}" data-ng-blur = "checkloginid(user.loginId)" data-ng-keypress="checkIfEnterKeyWasPressed($event, user)"/>
+			                <span id="validationloginid" class="validaTionStyle" style="display: none" data-i18n="val_input_login_id"></span>
+			                <span id="validationinvalidloginid" class="validaTionStyle" style="display: none;" data-i18n="val_input_invalid_login_id"></span>
+			            </div>
+			            <div class="form-group">
+			            	<label class="control-label">{{'password' | i18n}}</label>
+			                <input type="password" data-ng-model="user.password" name="password" class="form-control signin-control" placeholder="{{'password' | i18n}}"   data-ng-blur = "checkloginpwd(user.password)" data-ng-keypress="checkIfEnterKeyWasPressed($event, user)"/>
+			            	<span id="validationloginpwd" class="validaTionStyle" style="display: none" data-i18n="val_input_login_password"></span>
+			            	<span id="validationinvalidpassword" class="validaTionStyle" style="display: none" data-i18n="val_input_invalid_password"></span>
+			            </div> 
+			                   
+			            <div class="form-group" style="height:20px;">
+			            	<button class="btn btn-default" style="float:right" type="cancel" data-ng-click="cancelDiv()">{{'btn_cancel' | i18n}}</button>			               
+			                <button class="btn btn-default" style="float:right" ng-click="login(user)">{{'btn_sign_in' | i18n}}</button>
+			                <span data-ng-show ="ivdUsr" style="color:red;"><i class="fa  fa-times"></i> {{'invalid_user' | i18n}} !</span>			                 
+			            </div>			       					           			            
+	              </div>
+			    </div>
+			 </form>
+			</div>
+        </div>
+    </div>    
+</section>

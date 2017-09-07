@@ -1,0 +1,103 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'mcq' | i18n}} <small>{{'add_mcq_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'mcq' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="mcqForm" novalidate id="mcqForm">
+				<div class="box-body">
+	
+					<div class="row"> 
+						<div class="col-md-8">
+							<div class="form-group" >
+							<label class="control-label">{{'mcq_question' | i18n}}<b style="color:red">*</b></label>
+							<textarea  id="question"  class="form-control" name="question" data-ng-model="mcq.question" required placeholder="{{'mcq_question' | i18n}}" ></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'mcq_optiona' | i18n}}</label>
+							<textarea id="optiona" maxlength="128" class="form-control" name="optiona" data-ng-model="mcq.optiona" required placeholder="{{'mcq_optiona' | i18n}}" ></textarea>
+							</div>
+						</div>
+						
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'mcq_optionb' | i18n}}</label>
+							<textarea  id="optionb" maxlength="128" class="form-control" name="optionb" data-ng-model="mcq.optionb" required placeholder="{{'mcq_optionb' | i18n}}" ></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="row"> 
+						
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'mcq_optionc' | i18n}}</label>
+							<textarea id="optionc" maxlength="128" class="form-control" name="optionc" data-ng-model="mcq.optionc" required placeholder="{{'mcq_optionc' | i18n}}" ></textarea>
+							</div>
+						</div>
+						
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'mcq_optiond' | i18n}}</label>
+							<textarea  id="optiond" maxlength="128" class="form-control" name="optiond" data-ng-model="mcq.optiond" required placeholder="{{'mcq_optiond' | i18n}}"></textarea>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'mcq_answer' | i18n}}</label><br/>
+								<label> <input type="radio" data-ng-model="mcq.answer" value="A">&nbsp; A</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	  							<label><input type="radio" data-ng-model="mcq.answer" value="B">&nbsp; B</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	  							<label><input type="radio" data-ng-model="mcq.answer" value="C">&nbsp; C</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	  							<label><input type="radio" data-ng-model="mcq.answer" value="D">&nbsp; D</label>&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+						</div>
+					</div>
+					
+					<div class="row"> 
+						
+						<div class="form-group" >
+							<label class="control-label">{{'mcq_tags' | i18n}}</label><br/>
+							<div class="col-md-6" data-ng-repeat="t in mcq.tags track by $index" > <span class="glyphicon glyphicon-minus"  data-ng-click="removeTags(t)"></span> {{t.name}} &lt;&lt; {{parents[t.parentId].name}} &lt;&lt; {{parents[parents[t.parentId].parentId].name}}</div>
+						</div>
+						
+					</div>
+					
+					<div class="row" style="max-height:200px; overflow: scroll;">
+						<div class="col-md-12">
+							Search: <input data-ng-model="search.name">
+						</div>
+						<div class="col-md-6" data-ng-repeat="m in menu|filter:search" > <span class="glyphicon glyphicon-plus"  data-ng-click="addTags(m)"></span> {{m.name}} &lt;&lt; {{parents[m.parentId].name}} &lt;&lt; {{parents[parents[m.parentId].parentId].name}}</div>
+					</div>
+				</div>
+				
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveMcq(mcq)" data-ng-disabled=" (mcqForm.question.$dirty && mcqForm.question.$invalid) || (mcqForm.optiona.$dirty && mcqForm.optiona.$invalid)" > {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInMcqListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

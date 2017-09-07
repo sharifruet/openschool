@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <title>{{pageTitle}}</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+   
+        <link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" href="http://textangular.com/dist/textAngular.css" type="text/css">
+        
+    </head>
+    <body class="skin-blue" ><!-- oncontextmenu="return false;" -->
+        
+        <!-- header logo: style can be found in header.less -->
+        <header class="header" data-ng-show="layout.header.isVisible" data-ng-include="layout.header.location">
+            
+        </header>
+        
+        <div class="wrapper row-offcanvas row-offcanvas-left" style="min-height: 400px;" ng-class="{ 'active relative': true == isMobile }">
+            <aside class="left-side sidebar-offcanvas" id="toggle" ng-class="layout.leftPanel.isVisible ? 'myleftside' : 'collapse-left'" data-ng-include="layout.leftPanel.location">
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side view-slide-in" id="content" ng-class="{ 'strech': false == layout.leftPanel.isVisible }" data-ng-view>
+                
+            </aside><!-- /.right-side -->
+                     
+        </div><!-- ./wrapper -->
+                 
+          <!-- footer : style can be found in header.less -->
+        <footer class="footer" data-ng-show="layout.footer.isVisible" data-ng-include="layout.footer.location">
+                   
+        </footer>
+        
+
+		<!-- Lib JS -->
+        <script type="text/javascript" src="Scripts/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="Scripts/jquery/jquery-ui-1.10.3.min.js"></script>
+	    <script type="text/javascript" src="Scripts/jquery/jquery.numeric.js"></script>
+	    <script type="text/javascript" src="Scripts/other/underscore.js"></script>
+	    <script type="text/javascript" src="Scripts/bootstrap/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="Scripts/bootstrap/bootstrap-switch.js"></script>
+	    <script type="text/javascript" src="Scripts/other/select2.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular.1.4.4.min.js"></script>
+	     <!-- depanding for pagination & modal etc-->
+	    <script type="text/javascript" src="Scripts/angular/angular-ui.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular-ui-bootstrap.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/ui-bootstrap-tpls.min.js"></script>
+	    <!--  -->
+	    <script type="text/javascript" src="Scripts/angular/angular-animate.1.4.4.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular-route.1.4.4.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/TweenMax.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/q.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular-resource.1.4.4.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular-cookies.1.4.4.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular-sanitize.1.4.4.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/angular-loader.1.4.4.min.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/ng-table.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/localize.js"></script>	    
+	    <script type="text/javascript" src="Scripts/angular/angular-underscore-module.js"></script>
+	    <script type="text/javascript" src="Scripts/angular/ngProgress.js"></script>
+	    <!-- depanding for pagination & modal -->
+	    <script type="text/javascript" src="Scripts/bootstrap/ui-bootstrap-0.11.0.js"></script>
+	    <script type="text/javascript" src="Scripts/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+	    <!--  -->
+	    <script type="text/javascript" src="Scripts/highchart/highcharts.js"></script>
+	    <script type="text/javascript" src="Scripts/highchart/highcharts-3d.js"></script>
+	    <script type="text/javascript" src="Scripts/highchart/highcharts-ng.js"></script>
+	    <script type="text/javascript" src="Scripts/other/chosen.jquery.js"></script> 
+	    <script type="text/javascript" src="Scripts/other/moment.js"></script>
+	    <script type="text/javascript" src="Scripts/other/moment-range.js"></script>
+	    <script type="text/javascript" src="Scripts/other/daterangepicker.js"></script>
+	    <script type="text/javascript" src="Scripts/other/date.js"></script>
+	    <script type="text/javascript" src="Scripts/other/awesomplete.js"></script>
+		
+		<script type="text/javascript" src='Scripts/textangular/textAngular-rangy.min.js'></script>
+		<script type="text/javascript" src='Scripts/textangular/textAngular-sanitize.min.js'></script>
+		<script type="text/javascript" src='Scripts/textangular/textAngular.min.js'></script>
+	    
+	    
+	    <script type="text/javascript" src="Scripts/angular/angular-bootstrap-datepicker.js"></script>
+     	<script type="text/javascript" src="Scripts/bootstrap/bootstrap-datepicker.js"></script>        
+        
+	    <script type="text/javascript" src="Scripts/metisMenu/metisMenu.min.js"></script>
+	    <!-- Load custom scripts via RequireJS -->
+	    <script type="text/javascript" src="Scripts/require/require.js" data-main="Scripts/main"></script>
+              
+        <div id="overlay" class="web_dialog_overlay"></div>
+	    <div id="dialog" class="web_dialog"></div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

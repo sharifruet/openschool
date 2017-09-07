@@ -1,0 +1,127 @@
+
+   <style type="text/css">
+    div#main 
+    {
+        width: 97% !important;
+		text-align: center;
+        margin: 0;
+    }
+    .success { background-color: #0062A3;}
+  </style>
+  <s:head/>
+</head>
+
+<section id="first">
+
+ 
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" height="550">
+	  <tr><td valign="middle" align="center">	  	
+
+    
+     	&nbsp;<p>&nbsp;</p>
+		<p>&nbsp;</p>
+
+    
+     	<table>
+			<tr>
+				<td>
+					&nbsp;
+				</td>
+			</tr>				
+		</table>
+		
+    
+    
+    <table width="30%" border="0" height="146"  bordercolor="#FFFFFF">
+      <tr>
+        <td height="189" >
+          <table width="40%" border="0" align="center">
+            <tr>
+              <td>
+                <table width="100%" border="0">
+                  <tr>
+                    <td>
+                      <div align="center">
+                         <span data-ng-show ="ivdUsr" style="color:red;"><i class="fa  fa-times"></i> Invalid User !</span>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td height="2">
+                <table width="100%" border="0" bgcolor="#0062A3" height="8">
+                  <tr>
+                    <td height="2">
+                      <div class="success" align="center">
+                        <font color="#FFFFFF" face="Verdana">
+                            Welcome to My Application
+                        </font>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>              
+                <table width="100%" border="0" bgcolor="#0062A3" height="80">
+                  <tr>
+                    <td height="119">
+                      <table bgcolor="snow" border=0 cellpadding=2 cellspacing=1 width=400 height="117">
+                        <tbody>
+                        <tr>
+                          <td bgcolor="#0062A3">&nbsp; 
+                          <form method="post" id="SigninForm" name="SigninForm" autocomplete="off">
+								<table width="100%" border="0" bgcolor="#FFFFFF" height="120">
+								<tr>
+								<td align=right width="64">
+	                            	<img src="images/login.jpg" width="64" height="64" />
+	                          	</td>
+								<td>
+									<table border="0" width="100%">
+										  	<div class="form-group has-feedback">
+								                <input id="loginId" type="text" data-ng-model="user.loginId" name="userid" class="form-control signin-control" placeholder="User ID" data-ng-blur = "checkloginid(user.loginId)" />
+								                <span id="validationloginid" class="validaTionStyle" style="display: none" data-i18n="val_input_login_id"></span>
+								                <span id="validationinvalidloginid" class="validaTionStyle" style="display: none;" data-i18n="val_input_invalid_login_id"></span>
+								            </div>
+								            <div class="form-group">
+								                <input type="password" data-ng-model="user.password" name="password" class="form-control signin-control" placeholder="Password"   data-ng-blur = "checkloginpwd(user.password)"/>
+								            	<span id="validationloginpwd" class="validaTionStyle" style="display: none" data-i18n="val_input_login_password"></span>
+								            	<span id="validationinvalidpassword" class="validaTionStyle" style="display: none" data-i18n="val_input_invalid_password"></span>
+								            </div> 
+	                        			<tr>
+											<td/>
+	                          				<td>
+								   				  <div class="form-group" style="height:20px;">
+								   				  		<button class="btn btn-default" style="float:right" type="cancel" data-ng-click="cancelDiv()">Cancel</button>
+							   				   			<button class="btn btn-Signin" style="float:right" ng-click="login(user)">Sign In </button>                									                 	                
+										          </div>	
+	                         				</td>
+	                        			</tr>
+									</table>
+								</td>
+								</tr>
+								</table>
+							 </form>
+
+						  </td>
+                        </tr>
+                        <tr>
+                          <td align=right bgcolor="#0062A3">&nbsp;
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+        	</table>
+		</table>
+		</td></tr>
+	</table>
+	</td></tr>
+</table>
+
+</section>

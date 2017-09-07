@@ -1,0 +1,11 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Genericmodel extends CI_Model {
+    var $uniqueCode = '';
+    var $version    = 0;
+    var $status   = 0;
+    var $createdBy   = 0;
+    var $createdDate   = '2017-01-01';
+    var $updatedBy   = 0;
+    var $updatedDate   = '2017-01-01';
+}?>

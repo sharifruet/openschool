@@ -1,0 +1,45 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'features' | i18n}} <small> {{'feature_list' | i18n}} </small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}} </a></li>
+			<li class="active">{{'feature_list' | i18n}}</li>
+		</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="clientListNav clientNav " >
+		<div class="col-md-2">                                        
+			<button class="btn btn-primary  pull-left" ng-click="gotoFeature()">{{'add_new' | i18n}}</button>
+		</div>		
+	</div>
+	<div class="box box-primary" style="border-top-color: #8574AD;">
+		<div class="box-body no-padding">
+			<div class="table-responsive">
+				<table data-ng-table="tableParams" class="table table-condensed table-bordered table-striped">
+					<tbody>
+					<tr ng-repeat="feature in $data  track by $index">
+						<td data-title="getLocalizedValue('sl_no')" class="text-right" data-header-class="text-right" width="20px">{{$index+1}}</td>
+						<td data-title="getLocalizedValue('action')" width="100px">
+							<div class="btn-group">
+								<button type="button" data-toggle="tooltip" title="{{'edit' | i18n}}" class="btn btn-defult fa fa-edit" ng-click="goToFeatureForEdit(feature)"></button>
+								<button type="button" data-toggle="tooltip" title="{{'delete' | i18n}}" class="btn btn-danger fa fa-trash-o" ng-click="deleteFeature(feature)"></button>
+							</div>
+						</td>
+						<td data-title="getLocalizedValue('feature_uniqueCode')" sortable="'uniqueCode'" filter="{ uniqueCode: 'text' }" class="text-left" data-header-class="text-left">{{feature.uniqueCode}}</td>
+						<td data-title="getLocalizedValue('feature_displayName')" sortable="'displayName'" filter="{ displayName: 'text' }" class="text-left" data-header-class="text-left">{{feature.displayName}}</td>
+						<td data-title="getLocalizedValue('feature_codeNumber')" sortable="'codeNumber'" filter="{ codeNumber: 'text' }" class="text-left" data-header-class="text-left">{{feature.codeNumber}}</td>
+						<td data-title="getLocalizedValue('feature_menu')" sortable="'menu'" filter="{ menu: 'text' }" class="text-left" data-header-class="text-left">{{feature.menu}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>

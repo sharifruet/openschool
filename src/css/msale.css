@@ -1,0 +1,177 @@
+
+.myleftside {
+  background: #f4f4f4;
+  -webkit-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.07);
+}
+
+#first .smashinglogo 
+{
+	/* background: url("../img/bgc.jpg") no-repeat center fixed ; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+ 	background-size: cover;
+ 	background-position: center; */
+ 	background-size: 100% 100%;
+ 	background-color: #FFFFFF; 	
+}
+.form-box .headerSgnIn {
+ /*  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0; 
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #3d9970; 
+  box-shadow: inset 0px -2px 0px #8574AD; */
+  box-shadow: -9px 7px 0px 22px rgba(0,98,163,1); 
+  adding: 10px 10px;
+  height: 32px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 150; 
+  font-face: Verdana;
+  font-color: #FFFFFF;
+  /* padding: 10px 10px;
+  height: 72px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff; */
+  
+}
+
+  span.validaTionStyle {
+	color: #DD4B39;
+	display: inline-block;
+	font-size: 15px;
+	line-height: 13px;
+	margin: 4px 0px;
+	text-align: left;
+}
+
+.btn.btn-Signin{
+	background-color: #8574AD;
+	border-color: #8574AD;
+	background-image: linear-gradient(to bottom, #8574AD, #8574AD);
+	color: white;
+}
+
+.bg-clrSingin {
+   /* background-color: #F0F2F3 !important; #0062A3; */
+  /*  box-shadow: inset 0px -2px 0px #8574AD; 
+     border-top-left-radius: 20px;
+  	border-top-right-radius: 20px;
+  	border-bottom-right-radius: 0;
+  	border-bottom-left-radius: 0;  */
+   background-color: #FFFFFF !important;
+   border-color: #8574AD; 
+   box-shadow: -9px 7px 0px 22px rgba(0,98,163,1);  
+  	
+}
+
+.clientListNav { 
+	display:block;
+	background: #fff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	min-height: 50px;
+    padding-bottom: 3px;
+}
+
+.clientNav{
+	margin-bottom: 10px;padding-top:8px;margin-left:0px;
+}
+
+.result {
+    display: block;
+    background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    min-height: 50px;
+    padding-bottom: 3px;
+}
+
+.pagination {
+    display: inline-block !important;
+    padding-left: !important;
+    padding-top: !important;
+    margin: 8px 0px 0px 8px !important;
+    border-radius: 4px!important;
+}
+
+.cursor{
+	cursor: pointer;
+}
+
+.clearable{
+  background: #fff url(data:image/gif;base64,R0lGODlhBwAHAIAAAP///5KSkiH5BAAAAAAALAAAAAAHAAcAAAIMTICmsGrIXnLxuDMLADs=) no-repeat right -10px center;
+  border: 2px solid #999;
+  padding: 3px 18px 3px 4px; /* Use the same right padding (18) in jQ! */
+  border-radius: 3px;
+  transition: background 0.4s;
+  width:150px;height:30px;
+}
+.icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: green;
+}
+.clearable.x  { background-position: right 5px center; }
+.clearable.onX{ cursor: pointer; }
+.clearable::-ms-clear {display: none; width:0; height:0;}
+
+.the-legend {
+    border-style: none;
+    border-width: 0;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+.the-fieldset {
+    border: 2px groove threedface #444;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+.sc{
+	background-image: url("../images/top_image.png");
+}
+
+
+.gradient-style {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+ /*  width: 480px; */
+  text-align: left;
+  border-collapse: collapse;
+ /*  margin: 20px; */
+}
+
+
+.gradient-style th {
+  font-size: 13px;
+  font-weight: normal;
+  background: #b9c9fe url("../img/gradhead.png") repeat-x;
+  border-top: 2px solid #d3ddff;
+  border-bottom: 1px solid #fff;
+  color: #039;
+  padding: 8px;
+}
+.gradient-style td {
+  border-bottom: 1px solid #fff;
+  color: #669;
+  border-top: 1px solid #fff;
+  background: #e8edff url("../img/gradback.png") repeat-x;
+  padding: 8px;
+}
+.gradient-style tfoot tr td{background:#e8edff;font-size:12px;color:#99c;}
+.gradient-style tbody tr:hover td{background:#d0dafd url("../img/gradhover.png") repeat-x;color:#339;}

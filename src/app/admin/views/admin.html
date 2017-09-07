@@ -1,0 +1,38 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'admin' | i18n}} <small>{{'admin_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'admin' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div style="border-top-color: #8574AD;padding-bottom: 55px;" >
+				<div class="box-body">
+					<div class="inner">
+						<h3 class="page-header">{{'admin_information' | i18n}}</h3>
+						<div data-ng-repeat="link in adminLinks"
+							data-ng-click="performClickAction(link.url)">
+							<a style="cursor: pointer; font-size: 18px;"> <i class="{{link.class}}"></i>
+								{{link.linkText}}
+							</a>
+							<h6 style="padding-left: 2%; margin-top: 2px; margin-bottom: 15px;" class="text-muted">
+							{{link.description}}</h6>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>		
+	</div>
+</section>

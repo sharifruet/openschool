@@ -1,0 +1,50 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'menus' | i18n}} <small> {{'menu_list' | i18n}} </small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}} </a></li>
+			<li class="active">{{'menu_list' | i18n}}</li>
+		</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="clientListNav clientNav " >
+		<div class="col-md-2">                                        
+			<button class="btn btn-primary  pull-left" ng-click="gotoMenu()">{{'add_new' | i18n}}</button>
+		</div>
+	</div>
+	<div class="box box-primary" style="border-top-color: #8574AD;">
+		<div class="box-body no-padding">
+			<div class="table-responsive">
+				<table data-ng-table="tableParams" class="table table-condensed table-bordered table-striped">
+					<tbody>
+					<tr ng-repeat="menu in $data  track by $index">
+						<td data-title="getLocalizedValue('sl_no')" class="text-right" data-header-class="text-right" width="20px">{{$index+1}}</td>
+						<td data-title="getLocalizedValue('action')" width="100px">
+							<div class="btn-group">
+								<button type="button" data-toggle="tooltip" title="{{'edit' | i18n}}" class="btn btn-defult fa fa-edit" ng-click="goToMenuForEdit(menu)"></button>
+								<button type="button" data-toggle="tooltip" title="{{'delete' | i18n}}" class="btn btn-danger fa fa-trash-o" ng-click="deleteMenu(menu)"></button>
+							</div>
+						</td>
+						
+						<td data-title="getLocalizedValue('menu_name')" sortable="'name'" filter="{ name: 'text' }" class="text-left" data-header-class="text-left">{{menu.name}}</td>
+						<td data-title="getLocalizedValue('menu_displayName')" sortable="'displayName'" filter="{ displayName: 'text' }" class="text-left" data-header-class="text-left">{{menu.displayName}}</td>
+						<td data-title="getLocalizedValue('menu_parentid')" sortable="'parentid'" filter="{ parentid: 'text' }" class="text-left" data-header-class="text-left">{{menu.parentid}}</td>
+						<td data-title="getLocalizedValue('menu_hierarchyPath')" sortable="'hierarchyPath'" filter="{ hierarchyPath: 'text' }" class="text-left" data-header-class="text-left">{{menu.hierarchyPath}}</td>
+						<td data-title="getLocalizedValue('menu_status')" sortable="'status'" filter="{ status: 'text' }" class="text-left" data-header-class="text-left">{{menu.status}}</td>
+						<td data-title="getLocalizedValue('menu_isEnd')" sortable="'isEnd'" filter="{ isEnd: 'text' }" class="text-left" data-header-class="text-left">{{menu.isEnd}}</td>
+						
+						
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>

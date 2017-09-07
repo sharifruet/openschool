@@ -1,0 +1,64 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'feature' | i18n}} <small>{{'add_feature_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'feature' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="featureForm" novalidate id="featureForm">
+				<div class="box-body">	
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'feature_uniqueCode' | i18n}}<b style="color:red">*</b></label>
+								<input type="text" id="uniqueCode" maxlength="50" class="form-control" name="uniqueCode" data-ng-model="feature.uniqueCode" required placeholder="{{'feature_uniqueCode' | i18n}}" />
+								<span id="validaTionuniqueCode"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>									
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+	   							<label class="control-label">{{'feature_displayName' | i18n}}</label>
+		        					<input type="text" id="displayName" maxlength="50" class="form-control"  name="displayName" data-ng-model="feature.displayName" required placeholder="{{'feature_displayName' | i18n}}" />										
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+	   							<label class="control-label">{{'feature_codeNumber' | i18n}}</label>
+		        					<input type="text" id="codeNumber" maxlength="24" class="form-control"  name="codeNumber" data-ng-model="feature.codeNumber" required placeholder="{{'feature_codeNumber' | i18n}}" />										
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+	   							<label class="control-label">{{'feature_menu' | i18n}}</label>
+		        					<input type="checkbox" id="menu" maxlength="24" class="form-control"  name="menu" data-ng-model="feature.menu" required placeholder="{{'feature_menu' | i18n}}" />										
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveFeature(feature)" data-ng-disabled="featureForm.uniqueCode.$dirty && featureForm.uniqueCode.$invalid"> {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInFeatureListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

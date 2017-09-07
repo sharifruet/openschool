@@ -1,0 +1,39 @@
+<form>
+<div id="mymodal">
+<div class="modal-header modal-header-confirm">
+	<h4 class="modal-title ng-binding">
+		<span ></span>{{modalOptions.headerText}}
+	</h4>
+</div>
+
+<div class="modal-body">
+
+<div class="row">
+		<div class="col-lg-4">
+			<div class="form-group">
+				<label class="control-label">Secondary  Role<b style="color:red">*</b></label>
+					<select data-ng-model="user.secondaryRole" id="ddlPrimaryRole" ui-select2 class="form-control" style="padding: 0px;" data-placeholder="Select Secondary Role">
+                           <option value=""></option>
+                           <option data-ng-repeat="role in modalOptions.rolejson" value="{{role}}">{{role}}</option> 
+	                </select>
+			</div>
+		</div>
+	</div>
+ <div class="row">
+	<div class="col-lg-8">
+		<label class="control-label">Password</label>
+		<input type="password" id="txtPassword" class="form-control"  name="user.password" data-ng-model="user.password" data-placeholder="Enter Password"/>
+		
+		<span data-ng-show ="user.password != modalOptions.pass && user.password != null " style="color:red;"> Your password not correct yet! <i class="fa  fa-times"></i></span>
+		<span data-ng-show ="user.password == modalOptions.pass" style="color:green;"> Yes! you entered correct  password, Please login. <i class="fa fa-check-square"></i></span>
+	</div>
+</div> 	   
+  
+</div>
+	 <div class="modal-footer">
+			<button data-ng-disabled="user.password != modalOptions.pass" id="btnsubmit" type="submit" class="btn btn-primary" data-ng-click="modalOptions.ok(user)" ><i class="glyphicon glyphicon-ok"></i>{{modalOptions.actionButtonText}}</button>
+			<button class="btn btn-deafult" data-ng-click="modalOptions.close()"><i class="fa fa-times"></i>{{modalOptions.closeButtonText}}</button>
+			
+	</div>
+</div>
+</form>

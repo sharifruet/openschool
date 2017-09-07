@@ -1,0 +1,58 @@
+<section class="content-header">
+    <h1>
+        Configuration<small> Database Configuration  </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a class="homeClick" data-ng-click="goHome();"><i class="fa fa-dashboard"></i> Home</a>
+        </li>
+        <li class="active">Configuration</li>
+    </ol>
+</section>
+<div class="row" style="margin-top: 0px;">
+	<div class="col-xs-12">
+		<div data-ng-include="messagePageLocation"></div>
+	</div>
+</div>
+<section class="content">
+   <div class="box box-primary">
+		<form name="milestone" novalidate >
+			<div class="box-body">
+ 				<div class="row">
+					<div class="col-lg-4">
+	   					<div class="form-group" >
+		        			<label class="control-label"> Old Password <b style="color:red">*</b></label>
+		        			<input type="password" class="form-control" id="txtOnldPassword" name="configuration.oldPassword"  data-ng-model="configuration.oldPassword"  placeholder="Old Password" data-ng-blur ="checkOldPassword(configuration.oldPassword)"/>
+		        			<span id="validaTionOldPassword" class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+		        			<span id="validationInvalidOldPassword" class="validaTionStyle" style="display: none" data-i18n="val_input_invalid_old_password"></span>
+	    				</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+		   				<div class="form-group" >
+		        			<label class="control-label"> New Password <b style="color:red">*</b></label>
+		        			<input type="password" class="form-control" id="txtNewPassword" name="configuration.newPassword" data-ng-model="configuration.newPassword"  placeholder="New Password" data-ng-blur="checkPasswordLength(configuration.newPassword)"/>
+		        			<span id="validaTionNewPassword" class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+		        			<span id="validaTionNewPasswordLength" class="validaTionStyle" style="display: none" data-i18n="val_input_password_leangth"></span>
+		        			<span id="validaTionAlphaNumaric" class="validaTionStyle" style="display: none" data-i18n="val_input_password_charecter"></span>
+		    			</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+		   				<div class="form-group" >
+		        			<label class="control-label"> Confirm Password <b style="color:red">*</b></label>
+		        			<input type="password" class="form-control" id="txtConfirmPassword" name="configuration.confirmPassword" data-ng-model="configuration.confirmPassword"  placeholder="Comfirm Password" data-ng-blur = "checkConfirmPassword(configuration.confirmPassword)"/>
+		        			<span id="validationConfirmPassword" class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+		        			<span id="validationNewPwdAndConfirmPwd" class="validaTionStyle" style="display: none" data-i18n="val_input_new_confirm_password_same"></span>
+		    			</div>
+					</div>
+				</div>
+				<div>
+		      		<button class="btn btn-primary" id ="submit"  ng-click="changePassword(configuration)">Submit</button>&nbsp&nbsp
+		      		<button class="btn btn-default" type="reset" class="btn btn-link" ng-click="reset()">Reset</button>
+		      	</div> 
+			</div>
+		</form>
+	</div>
+</section>

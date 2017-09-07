@@ -1,0 +1,55 @@
+[07-Nov-2016 05:33:06 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[07-Nov-2016 05:33:22 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[07-Nov-2016 05:51:00 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[07-Nov-2016 05:51:07 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[07-Nov-2016 05:51:27 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[07-Nov-2016 08:35:35 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/f4bijyg2/public_html/openschool/application/controllers/Login.php on line 67
+[08-Nov-2016 04:41:54 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[08-Nov-2016 05:56:03 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[08-Nov-2016 16:56:08 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[09-Nov-2016 05:26:11 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[09-Nov-2016 18:47:51 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[09-Nov-2016 19:18:51 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[10-Nov-2016 03:55:02 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[10-Nov-2016 05:32:55 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool/application/models/Crudmodel.php on line 40
+[10-Nov-2016 14:46:03 UTC] PHP Warning:  require_once(/home/f4bijyg2/public_html/openschool.com.bd/system/core/CodeIgniter.php): failed to open stream: No such file or directory in /home/f4bijyg2/public_html/openschool.com.bd/index.php on line 315
+[10-Nov-2016 14:46:03 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/f4bijyg2/public_html/openschool.com.bd/system/core/CodeIgniter.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/f4bijyg2/public_html/openschool.com.bd/index.php on line 315
+[10-Nov-2016 14:46:14 UTC] PHP Warning:  require_once(/home/f4bijyg2/public_html/openschool.com.bd/system/core/CodeIgniter.php): failed to open stream: No such file or directory in /home/f4bijyg2/public_html/openschool.com.bd/index.php on line 315
+[10-Nov-2016 14:46:14 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/f4bijyg2/public_html/openschool.com.bd/system/core/CodeIgniter.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/f4bijyg2/public_html/openschool.com.bd/index.php on line 315
+[10-Nov-2016 16:33:53 UTC] PHP Fatal error:  Cannot use [] for reading in /home/f4bijyg2/public_html/openschool.com.bd/application/models/Crudmodel.php on line 40
+[06-Dec-2016 05:23:10 UTC] PHP Fatal error:  Class 'Applicationconst' not found in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Login.php on line 57
+[27-Mar-2017 14:30:51 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:32:14 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:56 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:56 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:56 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:57 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:35:58 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:43:15 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:43:15 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:43:15 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:43:16 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:43:17 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:43:17 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:53 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:45:54 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 14:46:11 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[27-Mar-2017 15:24:22 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[28-Mar-2017 04:49:40 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[28-Mar-2017 04:56:29 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[28-Mar-2017 04:56:52 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[28-Mar-2017 04:56:56 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[28-Mar-2017 04:57:36 UTC] PHP Fatal error:  Call to undefined method Mcqmodel::saveMcq() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Rest.php on line 618
+[03-Apr-2017 03:13:48 UTC] PHP Fatal error:  Call to undefined method Articlemodel::getByCriteria() in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Site.php on line 24
+[29-Apr-2017 04:19:43 UTC] PHP Fatal error:  Call to a member function getByTag() on a non-object in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Site.php on line 52
+[01-May-2017 02:49:23 UTC] PHP Fatal error:  Call to a member function getById() on a non-object in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Site.php on line 116
+[01-May-2017 02:49:40 UTC] PHP Fatal error:  Call to a member function getById() on a non-object in /home/f4bijyg2/public_html/openschool.com.bd/application/controllers/Site.php on line 116

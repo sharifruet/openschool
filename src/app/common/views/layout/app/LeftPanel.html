@@ -1,0 +1,28 @@
+
+<section class="sidebar" data-ng-controller="appLeftMenuController">
+    <!-- Sidebar user panel -->
+    <div class="user-panel">        
+        <div class="pull-left info">
+            <p>Hello, {{loggedinUserInfo.loginId}}</p>
+        </div>
+    </div>
+ 
+    <ul class="sidebar-menu" id="side-menu">
+    	
+    	<li data-ng-repeat="item in menu" data-ng-class="{ treeview : item.child.length > 0}" id="{{item.id}}">
+    		<a data-ng-click="clickTopItem(item)" class="link-pointer">
+                <i class="{{item.class}}"></i>
+                <span>{{item.text}}</span>
+                <i class="fa pull-right fa-angle-left" data-ng-if="item.child.length > 0"></i>
+            </a>
+            <ul class="treeview-menu" data-ng-if="item.child.length > 0">
+                <li data-ng-repeat="childItem in item.child" style="margin-left: 10px; cursor: pointer;" data-ng-click="clickChildItem(childItem)" id="{{childItem.id}}">
+                	<a>
+                		<i class="{{childItem.class}}"></i> {{childItem.text}}
+                	</a>
+                </li>
+	        </ul>
+    	</li>
+    </ul>
+</section>
+

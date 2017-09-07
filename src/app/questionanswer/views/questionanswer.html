@@ -1,0 +1,80 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'questionanswer' | i18n}} <small>{{'add_questionanswer_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'questionanswer' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="questionanswerForm" novalidate id="questionanswerForm">
+				<div class="box-body">
+	
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'questionanswer_question' | i18n}}<b style="color:red">*</b></label>
+							<input type="text" id="question" maxlength="128" class="form-control" name="question" data-ng-model="questionanswer.question" required placeholder="{{'questionanswer_question' | i18n}}" />
+							<span id="validaTionquestion"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'questionanswer_answer' | i18n}}<b style="color:red">*</b></label>
+							<input type="text" id="answer" maxlength="128" class="form-control" name="answer" data-ng-model="questionanswer.answer" required placeholder="{{'questionanswer_answer' | i18n}}" />
+							<span id="validaTionanswer"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'questionanswer_type' | i18n}}</label>
+							<input type="text" id="type" maxlength="128" class="form-control" name="type" data-ng-model="questionanswer.typeId" required placeholder="{{'questionanswer_type' | i18n}}" />
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					<div class="row"> 
+						
+						<div class="form-group" >
+							<label class="control-label">{{'mcq_tags' | i18n}}</label><br/>
+							<div class="col-md-6" data-ng-repeat="t in questionanswer.tags track by $index" > <span class="glyphicon glyphicon-minus"  data-ng-click="removeTags(t)"></span> {{t.name}} &lt;&lt; {{parents[t.parentId].name}} &lt;&lt; {{parents[parents[t.parentId].parentId].name}}</div>
+						</div>
+						
+					</div>
+					
+					<div class="row" style="max-height:200px; overflow: scroll;">
+						<div class="col-md-12">
+							Search: <input data-ng-model="search.name">
+						</div>
+						<div class="col-md-6" data-ng-repeat="m in menu|filter:search" > <span class="glyphicon glyphicon-plus"  data-ng-click="addTags(m)"></span> {{m.name}} &lt;&lt; {{parents[m.parentId].name}} &lt;&lt; {{parents[parents[m.parentId].parentId].name}}</div>
+					</div>
+
+
+					
+				</div>
+				
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveQuestionanswer(questionanswer)" data-ng-disabled=" (questionanswerForm.question.$dirty && questionanswerForm.question.$invalid) || (questionanswerForm.answer.$dirty && questionanswerForm.answer.$invalid)" > {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInQuestionanswerListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

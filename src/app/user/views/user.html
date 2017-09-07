@@ -1,0 +1,89 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'user' | i18n}} <small>{{'add_user_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'user' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="userForm" novalidate id="userForm">
+				<div class="box-body">	
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'user_uniqueCode' | i18n}}<b style="color:red">*</b></label>
+								<input type="text" id="uniqueCode" maxlength="50" class="form-control" name="uniqueCode" data-ng-model="user.uniqueCode" required placeholder="{{'user_uniqueCode' | i18n}}" />
+								<span id="validaTionuniqueCode"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>									
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+	   							<label class="control-label">{{'user_firstName' | i18n}}</label>
+		        					<input type="text" id="firstName" maxlength="50" class="form-control"  name="firstName" data-ng-model="user.firstName" required placeholder="{{'user_firstName' | i18n}}" />										
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'user_lastName' | i18n}}</label>
+									<input type="text" id="lastName" class="form-control" maxlength="50"  name="lastName" data-ng-model="user.lastName" required placeholder="{{'user_lastName' | i18n}}" />											    					
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'user_password' | i18n}}</label>
+									<input type="password" id="password" class="form-control" maxlength="50"  name="password" data-ng-model="user.password" required placeholder="{{'user_password' | i18n}}" />											    					
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'user_confirmPassword' | i18n}}</label>
+									<input type="password" id="confirmPassword" class="form-control" maxlength="50"  name="confirmPassword" data-ng-model="user.confirmPassword" required placeholder="{{'user_confirmPassword' | i18n}}" />											    					
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'user_email' | i18n}}</label>
+									<input type="email" id="email" class="form-control" maxlength="255"  name="email" data-ng-model="user.email" required placeholder="{{'user_email' | i18n}}" />											    					
+							</div>
+						</div>
+					</div>										
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'user_contactNo' | i18n}}</label>
+									<input type="text" id="contactNo" class="form-control" maxlength="17"  name="contactNo" data-ng-model="user.contactNo" required placeholder="{{'user_contactNo' | i18n}}" />											    					
+							</div>
+						</div>
+					</div>																									
+				</div>
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveUser(user)" data-ng-disabled="userForm.uniqueCode.$dirty && userForm.uniqueCode.$invalid ||  
+						userForm.email.$dirty && userForm.email.$invalid || userForm.password.$dirty && userForm.password.$invalid"> {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInUserListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

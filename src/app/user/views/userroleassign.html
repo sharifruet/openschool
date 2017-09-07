@@ -1,0 +1,56 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'userroleassign' | i18n}} <small>{{'userroleassign' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'userroleassign' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="userroleassignForm" novalidate id="userroleassignForm">
+				<div class="box-body">
+
+			        <div class="row">
+			          <div class="col-xs-12 col-sm-6">
+						<div class="well">
+							<label style="font-size: 85%">{{'select_a_user' | i18n}} : </label>					
+							<select ui-select2 data-ng-model="selectedUserId" style="min-width:180px">
+								<option value=""></option>
+								<option data-ng-repeat="user in users" value="{{user.componentId}}">{{user.uniqueCode}}</option>
+							</select>
+							&nbsp;<button class="btn btn-primary" data-ng-click="selectUserChange()"> {{'btn_load' | i18n}} </button>
+						</div>	
+			          </div>
+			        </div>
+	
+			        <div class="row">
+			          <div class="col-xs-12 col-sm-6">
+						<div class="well">
+						  <label style="font-size: 85%" style="display:block; margin-left:10px" >{{'select_roles' | i18n}} : </label>
+						  <label data-ng-repeat="role in roles" class="checkbox-inline" style="display:block; margin-left:10px">
+						    <input type="checkbox" name="selectedRoles[]" value="{{role.componentId}}" data-ng-model="role.selected"> {{role.uniqueCode}}
+						  </label>		
+						</div>	
+			          </div>
+			        </div>
+					
+				</div>
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveUserRole()"> {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInUserListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

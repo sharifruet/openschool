@@ -1,0 +1,87 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'menu' | i18n}} <small>{{'add_menu_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'menu' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="menuForm" novalidate id="menuForm">
+				<div class="box-body">
+	
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'menu_name' | i18n}}<b style="color:red">*</b></label>
+							<input type="text" id="name" maxlength="128" class="form-control" name="name" data-ng-model="menu.name" required placeholder="{{'menu_name' | i18n}}" />
+							<span id="validaTionname"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'menu_displayName' | i18n}}<b style="color:red">*</b></label>
+							<input type="text" id="displayName" maxlength="128" class="form-control" name="displayName" data-ng-model="menu.displayName" required placeholder="{{'menu_displayName' | i18n}}" />
+							<span id="validaTiondisplayName"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'menu_parentid' | i18n}}</label>
+							<select data-ng-model="menu.parentId">
+								<option value="0">&nbsp;</option>
+								<option data-ng-repeat="parent in parents" value="{{parent.componentId}}">{{parent.displayName}}</option>
+							</select>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'menu_hierarchyPath' | i18n}}</label>
+							<input type="text" id="hierarchyPath" maxlength="128" class="form-control" name="hierarchyPath" data-ng-model="menu.hierarchyPath" required placeholder="{{'menu_hierarchyPath' | i18n}}" />
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'menu_status' | i18n}}</label>
+							<input type="text" id="status" maxlength="128" class="form-control" name="status" data-ng-model="menu.status" required placeholder="{{'menu_status' | i18n}}" />
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'menu_isEnd' | i18n}}</label>
+							<input type="checkbox" data-ng-true-value="1" data-ng-false-value="0" id="isEnd" class="form-control" name="isEnd" data-ng-model="menu.isEnd" required placeholder="{{'menu_isEnd' | i18n}}" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveMenu(menu)" data-ng-disabled=" (menuForm.name.$dirty && menuForm.name.$invalid) || (menuForm.displayName.$dirty && menuForm.displayName.$invalid)" > {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInMenuListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

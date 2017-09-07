@@ -1,0 +1,48 @@
+/* imported all css file into one file for faster loading */
+
+
+@import url("lib/bootstrap-responsive.min.css");
+@import url("animate.css");
+@import url("lib/animations.css");
+@import url("../fonts/font.css");
+@import url("../fonts/kaushanScript.css");
+@import url("lib/select2.css");
+@import url("lib/daterangepicker-bs3.css");	
+@import url("lib/jquery-ui.custom.css");
+@import url("lib/chosen.css");
+
+@import url("bootstrap.min.css");
+@import url("datepicker.css");
+
+@import url("font-awesome.min.css");
+@import url("ionicons.min.css");
+@import url("app/modal.css");
+
+@import url("lib/ng-table.css");
+@import url("ngProgress.css");
+@import url("lib/loader.css");
+@import url("metisMenu/metisMenu.min.css");
+
+@import url("bootstrap-datetimepicker.min.css");
+@import url("lib/bootstrap-switch.min.css");
+@import url("angular-grid.min.css");
+@import url("theme-dark.min.css");
+@import url("theme-fresh.min.css");
+
+@import url("msale.css");
+@import url("author.css");
+
+@import url("awesomplete.css");
+
+
+
+
+
+
+
+
+
+
+	
+    	
+     

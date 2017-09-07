@@ -1,0 +1,50 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'mcqs' | i18n}} <small> {{'mcq_list' | i18n}} </small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}} </a></li>
+			<li class="active">{{'mcq_list' | i18n}}</li>
+		</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="clientListNav clientNav " >
+		<div class="col-md-2">                                        
+			<button class="btn btn-primary  pull-left" ng-click="gotoMcq()">{{'add_new' | i18n}}</button>
+		</div>
+	</div>
+	<div class="box box-primary" style="border-top-color: #8574AD;">
+		<div class="box-body no-padding">
+			<div class="table-responsive">
+				<table data-ng-table="tableParams" class="table table-condensed table-bordered table-striped">
+					<tbody>
+					<tr ng-repeat="mcq in $data  track by $index">
+						<td data-title="getLocalizedValue('sl_no')" class="text-right" data-header-class="text-right" width="20px">{{$index+1}}</td>
+						<td data-title="getLocalizedValue('action')" width="100px">
+							<div class="btn-group">
+								<button type="button" data-toggle="tooltip" title="{{'edit' | i18n}}" class="btn btn-defult fa fa-edit" ng-click="goToMcqForEdit(mcq)"></button>
+								<button type="button" data-toggle="tooltip" title="{{'delete' | i18n}}" class="btn btn-danger fa fa-trash-o" ng-click="deleteMcq(mcq)"></button>
+							</div>
+						</td>
+						
+						<td data-title="getLocalizedValue('mcq_question')" sortable="'question'" filter="{ question: 'text' }" class="text-left" data-header-class="text-left">{{mcq.question}}</td>
+						<td data-title="getLocalizedValue('mcq_optiona')" sortable="'optiona'" filter="{ optiona: 'text' }" class="text-left" data-header-class="text-left">{{mcq.optiona}}</td>
+						<td data-title="getLocalizedValue('mcq_optionb')" sortable="'optionb'" filter="{ optionb: 'text' }" class="text-left" data-header-class="text-left">{{mcq.optionb}}</td>
+						<td data-title="getLocalizedValue('mcq_optionc')" sortable="'optionc'" filter="{ optionc: 'text' }" class="text-left" data-header-class="text-left">{{mcq.optionc}}</td>
+						<td data-title="getLocalizedValue('mcq_optiond')" sortable="'optiond'" filter="{ optiond: 'text' }" class="text-left" data-header-class="text-left">{{mcq.optiond}}</td>
+						<td data-title="getLocalizedValue('mcq_answer')" sortable="'answer'" filter="{ answer: 'text' }" class="text-left" data-header-class="text-left">{{mcq.answer}}</td>
+						
+						
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,93 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'article' | i18n}} <small>{{'add_article_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'article' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="articleForm" novalidate id="articleForm">
+				<div class="box-body">
+	
+					<div class="row"> 
+						<div class="col-md-8">
+							<div class="form-group" >
+							<label class="control-label">{{'article_title' | i18n}}<b style="color:red">*</b></label>
+							<input type="text" id="title" class="form-control" name="title" data-ng-model="article.title" required placeholder="{{'article_title' | i18n}}" />
+							<span id="validaTiontitle"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-8">
+							<div class="form-group" >
+							<label class="control-label">{{'article_subtitle' | i18n}}<b style="color:red">*</b></label>
+							<input type="text" id="subtitle" class="form-control" name="subtitle" data-ng-model="article.subtitle" required placeholder="{{'article_subtitle' | i18n}}" />
+							<span id="validaTionsubtitle"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-8">
+							<div class="form-group" >
+								<label class="control-label">{{'article_leadtext' | i18n}}</label>
+								<div text-angular="text-angular" data-ng-model="article.leadtext" ta-disabled='disabled'></div>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-8">
+							<div class="form-group" >
+								<label class="control-label">{{'article_content' | i18n}}</label>
+								<div text-angular="text-angular" data-ng-model="article.content" ta-disabled='disabled'></div>
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-md-4">
+							<div class="form-group" >
+							<label class="control-label">{{'article_type' | i18n}}</label>
+							<select data-ng-model="article.type"  data-ng-options="atype for atype in articleTypes">
+							</select>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="row"> 
+						
+						<div class="form-group" >
+							<label class="control-label">{{'mcq_tags' | i18n}}</label><br/>
+							<div class="col-md-6" data-ng-repeat="t in article.tags track by $index" > <span class="glyphicon glyphicon-minus"  data-ng-click="removeTags(t)"></span> {{t.name}} &lt;&lt; {{parents[t.parentId].name}} &lt;&lt; {{parents[parents[t.parentId].parentId].name}}</div>
+						</div>
+						
+					</div>
+					
+					<div class="row" style="max-height:200px; overflow: scroll;">
+						<div class="col-md-12">
+							Search: <input data-ng-model="search.name">
+						</div>
+						<div class="col-md-6" data-ng-repeat="m in menu|filter:search" > <span class="glyphicon glyphicon-plus"  data-ng-click="addTags(m)"></span> {{m.name}} &lt;&lt; {{parents[m.parentId].name}} &lt;&lt; {{parents[parents[m.parentId].parentId].name}}</div>
+					</div>
+
+				</div>
+				
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveArticle(article)" data-ng-disabled=" (articleForm.title.$dirty && articleForm.title.$invalid) || (articleForm.subtitle.$dirty && articleForm.subtitle.$invalid)" > {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInArticleListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>

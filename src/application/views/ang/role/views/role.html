@@ -1,0 +1,48 @@
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>
+		{{'role' | i18n}} <small>{{'add_role_information' | i18n}}</small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a ng-click="goHome();"><i class="fa fa-dashboard"></i> {{'home' | i18n}}</a></li>
+		<li class="active">{{'role' | i18n}}</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="row" style="margin-top: -10px;">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+	<div class="box box-primary">
+		<div class="box-body no-padding">
+			<form name="roleForm" novalidate id="roleForm">
+				<div class="box-body">	
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" >
+								<label class="control-label">{{'role_uniqueCode' | i18n}}<b style="color:red">*</b></label>
+								<input type="text" id="uniqueCode" maxlength="50" class="form-control" name="uniqueCode" data-ng-model="role.uniqueCode" required placeholder="{{'role_uniqueCode' | i18n}}" />
+								<span id="validaTionuniqueCode"  class="validaTionStyle" style="display: none" data-i18n="val_input"></span>									
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+	   							<label class="control-label">{{'role_description' | i18n}}</label>
+		        					<input type="text" id="description" maxlength="512" class="form-control"  name="description" data-ng-model="role.description" required placeholder="{{'role_description' | i18n}}" />										
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box-footer " >      
+	 				<button class="btn btn-primary" data-ng-click="saveRole(role)" data-ng-disabled="roleForm.uniqueCode.$dirty && roleForm.uniqueCode.$invalid"> {{'btn_save' | i18n}} </button>&nbsp;
+         			<button class="btn btn-default" type="reset" data-ng-click="resetfunction()">{{'btn_reset' | i18n}}</button>&nbsp;
+					<button class="btn btn-default" data-ng-click="goBackInRoleListPage()"><i class="fa fa-arrow-left"></i>&nbsp;<b>{{'btn_go_back' | i18n}}<b></button>
+				</div> 
+ 			</form>
+ 		</div>
+	</div>
+</section>
