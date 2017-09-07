@@ -1,3 +1,3 @@
-# openschool
+# OpenSchool
 
 Open School Platform
