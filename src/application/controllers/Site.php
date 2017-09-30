@@ -17,6 +17,7 @@ class Site extends MY_Controller {
 		$data = $this->commonTasksSite();
 		$data['catdata'] = array();
 		foreach ($data['menu'] as $m){
+		    
 			$this->db->select('questionanswer.*');
 			$this->db->from('menu');
 			$this->db->join('questionanswer', 'menu.componentId = questionanswer.typeId');
@@ -54,9 +55,10 @@ class Site extends MY_Controller {
 		
 		if($selectCat->isEnd==0){
 			$data['catdata'] = $this->db->get_where('menu', ['parentId'=>$selectCat->componentId])->result();
-			
+		
 			
 		}else{
+		   // echo $selectCat->componentId;
 			//$this->load->model('articlemodel');
 			$data['article'] = $this->articlemodel->getByTag($selectCat->componentId);
 			
@@ -101,10 +103,38 @@ class Site extends MY_Controller {
 	
 	}
 	
+	public function search($text='')
+	{	
+	    $data = $this->commonTasksSite();
+    	$data['catdata'] = array();
+    	
+    	$sql = "select `t`.`componentId` AS `componentId`,`t`.`object` AS `object`,`t`.`objectId` AS `objectId`,
+        	`t`.`menuId` AS `menuId`,q.question, q.answer, m.question, m.optiona, m.optionb, m.optionc, 
+        	m.optiond, a.title, a.subtitle, a.leadtext, a.content,
+        	ifnull(`m`.`createdDate`,ifnull(`q`.`createdDate`,`a`.`createdDate`)) AS `createdDate`
+        from `tags` `t` 
+        left join `mcq` `m` on(`t`.`objectId` = `m`.`componentId` and `t`.`object` = 'mcq') 
+        left join `questionanswer` `q` on(`t`.`objectId` = `q`.`componentId` and `t`.`object` = 'questionanswer') 
+        left join `articles` `a` on (`t`.`objectId` = `a`.`componentId` and `t`.`object` = 'articles')
+        WHERE MATCH (q.question, q.answer) AGAINST ('".$text."' IN NATURAL LANGUAGE MODE) > 0 
+        	OR MATCH (m.question, m.optiona, m.optionb, m.optionc, m.optiond) AGAINST ('".$text."' IN NATURAL LANGUAGE MODE) > 0 
+        	OR MATCH (a.title, a.subtitle, a.leadtext, a.content) AGAINST ('".$text."' IN NATURAL LANGUAGE MODE) > 0 
+        ORDER BY MATCH (q.question, q.answer) AGAINST ('".$text."' IN NATURAL LANGUAGE MODE) + 
+        	 MATCH (m.question, m.optiona, m.optionb, m.optionc, m.optiond) AGAINST ('".$text."' IN NATURAL LANGUAGE MODE) +
+        	MATCH (a.title, a.subtitle, a.leadtext, a.content) AGAINST ('".$text."' IN NATURAL LANGUAGE MODE) DESC";
+    	
+    	$query = $this->db->query($sql);
+    	$data['result'] = $query->result();
+    
+    	$this->load->view('templates/siteheader', $data);
+    	$this->load->view('site/search', $data);
+    	$this->load->view('templates/footer', $data);
+	}
+	
 	public function detail($type='qu', $id= -1, $title='111')
 	{
 		$cat = '2';
-		//echo $type."-<br/>";
+		echo $type."-<br/>";
 		//echo $id."-<br/>";
 		//echo $title."-<br/>";
 		$cat = urldecode($cat);

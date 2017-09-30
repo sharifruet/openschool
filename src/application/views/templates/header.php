@@ -6,8 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Regular School curriculam, General Knowledge, BCS and other job related examinationn preperation">
-    <meta name="keyword" content="BCS, Bangladesh, Civil, Service, PSC, preliminary,General Knowleddge, বিসিএস, চাকূরী ">
+    <meta name="keywords" content="বিসিএস, BCS, Bangladesh, Civil, Service, PSC, preliminary,General Knowleddge, বিসিএস, চাকূরী , School, Primary, Coaching, Tution, Education, Stud">
+    <meta name="description" content="This portal is contains contents for School Syllabus, General Knowledge, BCS and other job related examinationn preperation">
+
     <meta name="author" content="">
 
     <title>OpenSchool - Knowledge for all</title>
@@ -46,7 +47,6 @@
                 <a href="<?php echo base_url().'home/dashboard'?>"> 
                 	<img alt="" style="float:left; height: 70px;margin-bottom: -40px; padding: 1px 5px;" src="<?php echo base_url(); ?>resources/images/os.png"/>
 					<label class="navbar-brand">OPENSCHOOL</label>
-                	
                 </a>
             </div>
             

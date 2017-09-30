@@ -9,7 +9,7 @@ define(['app'], function (app) {
         this.port = ':8080';
         
         // Local Host
-        this.app = '/rest/';
+        this.app = 'rest/';
         
         // Cloud Foundry
     	//this.app = '/rest/';

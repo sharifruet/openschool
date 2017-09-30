@@ -66,11 +66,11 @@
             <!-- /.navbar-collapse -->
             </div>
             <div class="col-sm-3 col-md-3">
-		        <form class="navbar-form" role="search">
+		        <form class="navbar-form" action="search/" role="search">
 		        <div class="input-group">
-		            <input type="text" class="form-control" placeholder="Search" name="q">
+		            <input type="text" class="form-control" placeholder="Search" onchange="this.form.action='search/'+document.getElementById('q').value;" id="q">
 		            <div class="input-group-btn">
-		                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+		                <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search"></i></button>
 		            </div>
 		        </div>
 		        </form>
