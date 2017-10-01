@@ -24,7 +24,7 @@
         <div class="navbar-collapse collapse sidebar-navbar-collapse">
           <ul class="nav navbar-nav">
             <?php foreach ($catdata as $m):?> 
-  			<li><a href="<?php echo base_url().'category/'.$m->name;?>"><?php echo $m->displayName;?> </a></li>
+  			<li style="width: 100%;"><a href="<?php echo base_url().'category/'.$m->name;?>"><?php echo $m->displayName;?> </a></li>
   			<?php endforeach;?>
           </ul>
         </div><!--/.nav-collapse -->

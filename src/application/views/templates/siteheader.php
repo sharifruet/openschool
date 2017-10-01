@@ -80,22 +80,25 @@
         <!-- /.container -->
          
     </nav>
-    <?php if(isset($hierarchy)){?>
-    <nav class="breadcrumb">
-    	<div class="container">
-	    	<?php for ($i = count($hierarchy) - 1; $i>0;$i-- ){
-		    	$h = $hierarchy[$i];
-		    ?>
-		     <a class="breadcrumb-item" href="<?php echo base_url().'category/'.$h->name;?>"><?php echo $h->displayName;?></a> /
-		    <?php };
-		    if(count($hierarchy)>0){
-		    	$h = $hierarchy[0];
-		    ?>
-		  	<span class="breadcrumb-item active"><?php echo $h->displayName;?></span>
-		  <?php }?>
-	  	</div>
-	</nav>
-	<?php }?>
+    
+     <div class="container">
+        <?php if(isset($hierarchy)){?>
+        <nav class="breadcrumb">
+        	<div class="container">
+    	    	<?php for ($i = count($hierarchy) - 1; $i>0;$i-- ){
+    		    	$h = $hierarchy[$i];
+    		    ?>
+    		     <a class="breadcrumb-item" href="<?php echo base_url().'category/'.$h->name;?>"><?php echo $h->displayName;?></a> /
+    		    <?php };
+    		    if(count($hierarchy)>0){
+    		    	$h = $hierarchy[0];
+    		    ?>
+    		  	<span class="breadcrumb-item active"><?php echo $h->displayName;?></span>
+    		  <?php }?>
+    	  	</div>
+    	</nav>
+    	<?php }?>
+    </div>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58d4b21651b2cd0c"></script>
     
     <!-- Page Content -->
@@ -103,8 +106,13 @@
    
 		<div class="row">
 			<div class="col-lg-12">
-		   		<h1 class="page-header">Welcome!!!
-		        	<small>Welcome to OpenSchool</small>
+		   		<h1 class="page-header">
+		   		 <?php
+		   		 if(isset($hierarchy) && count($hierarchy)>0){
+        		    	$h = $hierarchy[0];
+        		    ?>
+        		  	<span class="breadcrumb-item active"><?php echo $h->displayName;?></span>
+        		  <?php }?>
 		  		</h1>
 			</div>
 		</div>
